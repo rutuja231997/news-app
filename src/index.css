@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.headline {
+  font-size: 22px;
+  line-height: 27px;
+  color: #44444d;
+  cursor: pointer;
+}
+
+.details {
+  display: flex;
+  flex-direction: flex-row;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #808290;
+}
+
+.content {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #44444d;
+  margin-top: 8px;
+}
+
+.source_name {
+  font-size: 12px;
+}
+
+.box {
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  display: flex;
+  height: 284px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 16px 8px 8px;
+  position: relative;
+  width: 50%;
+  width: 100%; /* Default to full width */
+  max-width: 900px; /* Ensure it doesn’t exceed 900px */
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  font-family: Roboto, sans-serif;
+}
+
+.image {
+  background-color: #e0e0e0;
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px;
+  height: 100%;
+  margin-right: 16px;
+  width: 320px;
+}
+
+.custom_shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.font_name {
+  font-family: Roboto, sans-serif;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .box {
+    flex-direction: column; /* Stack the content vertically */
+    height: auto; /* Adjust height for stacked content */
+    padding: 16px; /* Add more padding for mobile */
+  }
+
+  .image {
+    width: 100%; /* Full width for images */
+    height: 200px; /* Reduce image height */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 16px; /* Add spacing below image */
+  }
+
+  .headline {
+    font-size: 18px; /* Smaller font size for titles */
+    line-height: 24px; /* Adjust line height */
+  }
+
+  .details {
+    font-size: 10px; /* Smaller font size for details */
+    line-height: 18px;
+  }
+
+  .content {
+    font-size: 14px; /* Adjust font size for content */
+    line-height: 20px;
+  }
+
+  .source_name {
+    font-size: 10px; /* Smaller font size for source name */
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Auto-adjust height */
+    padding: 16px;
+  }
+
+  .image {
+    width: 100%;
+    height: 200px; /* Smaller image height for 768px */
+    margin-bottom: 16px;
+  }
+
+  .headline {
+    font-size: 20px; /* Adjust font size for tablet screens */
+    line-height: 26px;
+  }
+
+  .details {
+    font-size: 12px;
+  }
+
+  .content {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .source_name {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1536px) {
+  /* News Card Box */
+  .box {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .image {
+    width: 320px;
+    height: 200px; /* Adjusted for medium screen */
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+
+  .headline {
+    font-size: 22px; /* Adjusted for readability on medium screens */
+    line-height: 28px;
+  }
+
+  .details {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .content {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .source_name {
+    font-size: 14px;
+  }
+
+  /* Adjust the layout for the preview screen on medium devices */
+  .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .md\\:w-1\\w-1\2 {
+    width: 50%;
+  }
+}
